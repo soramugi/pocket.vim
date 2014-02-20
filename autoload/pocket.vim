@@ -66,7 +66,9 @@ function! pocket#send(action)
   else
     echo 'error ' . a:action . ' item ' . item_id . ' message : '. res.content
   endif
-  silent call pocket#list()
+  if 'archive' == a:action
+    silent call pocket#list()
+  endif
 endfunction
 
 function! pocket#action_parse(action,item_id)
