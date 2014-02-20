@@ -15,7 +15,7 @@ set cpo&vim
 " setting
 "------------------------
 if !exists("g:pocket_list_count")
-  let g:pocket_list_count = 10
+  let g:pocket_list_count = 50
 endif
 
 "------------------------
@@ -36,14 +36,14 @@ function! pocket#list()
     for key in keys(obj.list)
       let item = obj.list[key]
       let lists += [
-            \[item.resolved_url],
+            \[item.given_url],
             \key,
-            \item.resolved_title,
+            \item.given_title,
             \]
     endfor
     let &errorformat = '%A[%f],%C%l,%Z%m'
     cgetexpr join(lists,"\n")
-    copen
+    copen 50
   catch
     echo v:exception
     echo v:throwpoint
