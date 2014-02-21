@@ -36,12 +36,12 @@ function! pocket#list()
     for key in keys(obj.list)
       let item = obj.list[key]
       let lists += [
+            \item.given_title,
             \[item.given_url],
             \key,
-            \item.given_title,
             \]
     endfor
-    let &errorformat = '%A[%f],%C%l,%Z%m'
+    let &errorformat = '%A[%f],%Z%l,%C%m'
     cgetexpr join(lists,"\n")
     copen 50
   catch
