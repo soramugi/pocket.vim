@@ -26,7 +26,7 @@ It's important to get you are prompted for a `consumer_key` or `access_token`
 
 <https://getpocket.com/developer/apps/>
 
-![PocketList](img/1392894365.png "PocketList preview")
+![PocketList](img/1392974936.png "PocketList preview")
 
 Let's access in the browser url that is displayed
 
