@@ -1,5 +1,4 @@
 " Vim global plugin for Pocket Brows
-" Last Change: 2014 Feb 20
 " Maintainer: Yudai Tsuyuzaki <soramugi.chika@gmail.com>
 " License: This file is placed in the public domain.
 
