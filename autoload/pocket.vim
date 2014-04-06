@@ -26,6 +26,7 @@ function! pocket#list()
   let url = 'https://getpocket.com/v3/get'
   let ctx = pocket#conf()
   let ctx.count = g:pocket_list_count
+  let ctx.sort = 'newest'
 
   try
     let res = webapi#http#post(url, ctx, {})
