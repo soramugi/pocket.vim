@@ -35,8 +35,12 @@ function! pocket#list()
     let lists = []
     for key in keys(obj.list)
       let item = obj.list[key]
+      let title = item.given_title
+      if empty(title)
+        let title = item.resolved_title
+      endif
       let lists += [
-            \item.given_title,
+            \title,
             \[item.given_url],
             \key,
             \]
